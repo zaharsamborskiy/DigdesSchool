@@ -54,7 +54,7 @@ public class ChangesClass {
         String req5;
 
         if (containsIgnore(request, commands.getWHERE())) req = request.substring(commands.getCommandWhere());
-        if (!containsIgnore(request, commands.getWHERE())) req = request.substring((commands.getCommandValues() / 2) + 1);
+        if (!containsIgnore(request, commands.getWHERE())) req = request.substring((commands.getCommandValues() / 2));
         req2 = req.replaceAll(commands.getSecondRegex(), "").trim();
 
         if (containsIgnore(request, commands.getILIKE())) req2 = req2.replaceAll(commands.getILIKE(), "=");
@@ -83,7 +83,7 @@ public class ChangesClass {
         }
         if (containsIgnore(req, commands.getWHERE())) {
             req2 = req.replaceAll(commands.getRegex(), "").trim();
-            req3 = req2.substring(commands.getCommandValues() - 1, req.lastIndexOf(commands.getWHERE()) - commands.getWHERE().length());
+            req3 = req2.substring(commands.getCommandValues(), req.lastIndexOf(commands.getWHERE()) - commands.getWHERE().length());
         }
         return req3.split(",");
     }

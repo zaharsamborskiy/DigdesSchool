@@ -15,9 +15,9 @@ public class Commands {
     private String OR = "or";
     private String LIKE = "like";
     private String ILIKE = "ilike";
-    private int commandValues = 13;
+    private int commandValues = 12;
 
-    private int commandWhere = 12;
+    private int commandWhere = 11;
 
     private String regex = "[^A-Za-zА-Яа-я0-9,.=%-]";
 
