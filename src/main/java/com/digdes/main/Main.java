@@ -15,7 +15,6 @@ public class Main {
         boolean start = true;
         while (start) {
             mapList = starter.execute(scanner.nextLine());
-            System.out.println(mapList);
             if (scanner.nextLine().equals("exit")) {
                 start = false;
             }
