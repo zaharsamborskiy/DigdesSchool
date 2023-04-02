@@ -12,13 +12,7 @@ public class Main {
         JavaSchoolStarter starter = new JavaSchoolStarter();
         Scanner scanner = new Scanner(System.in);
         List<Map<String, Object>> mapList;
-        boolean start = true;
-        while (start) {
-            mapList = starter.execute(scanner.nextLine());
-            if (scanner.nextLine().equals("exit")) {
-                start = false;
-            }
-        }
+        mapList = starter.execute(scanner.nextLine());
 
 
 
